@@ -13,14 +13,8 @@
     <title>Login</title>
 </head>
 <body>
-
-<%
-    String username = (String)request.getAttribute("name");
-    String password = (String)request.getAttribute("password");
-    request.getSession().setAttribute("name", username);
-    request.getSession().setAttribute("password", password);
-%>
-
+<%--<%@include file="partials/head.jsp"%>--%>
+<%@include file="partials/navbar.jsp"%>
 
 <form action="profile.jsp" method="post">
     <div class="container">
