@@ -47,13 +47,13 @@
 <%--    </div>--%>
 <%--</form>--%>
 
-
-<%
-    String username = request.getParameter("username");
-    String password = request.getParameter("password");
-    if (username != null && username.equals("admin") && password != null && password.equals("password"))
-        response.sendRedirect("profile.jsp?username=" + username);
-%>
+<%--    ****Solution****    --%>
+<%--<%--%>
+<%--    String username = request.getParameter("username");--%>
+<%--    String password = request.getParameter("password");--%>
+<%--    if (username != null && username.equals("admin") && password != null && password.equals("password"))--%>
+<%--        response.sendRedirect("profile.jsp?username=" + username);--%>
+<%--%>--%>
 
 <form action="login.jsp" method="POST">
     <label for="username">Username</label>
