@@ -1,3 +1,4 @@
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -11,6 +12,16 @@ public class ListAdsDao implements Ads {
         return ads;
     }
 
+    @Override
+    public List<Ad> getAllByUser(long userId) throws SQLException {
+        return null;
+    }
+
+    @Override
+    public List<Ad> getAdsByCategory(String category) throws SQLException {
+        return null;
+    }
+
     public Long insert(Ad ad) {
         // make sure we have ads
         if (ads == null) {
@@ -18,10 +29,31 @@ public class ListAdsDao implements Ads {
         }
         // we'll assign an "id" here based on the size of the ads list
         // really the database would handle this
-        ad.setId((long) ads.size());
+        ad.setId(ads.size());
         ads.add(ad);
         return ad.getId();
     }
+
+    @Override
+    public Ad retrieve(long id) throws SQLException {
+        return null;
+    }
+
+    @Override
+    public boolean delete(long id) throws SQLException {
+        return false;
+    }
+
+
+//    @Override
+//    public boolean refresh(Ad ad) {
+//        return false;
+//    }
+//
+//    @Override
+//    public boolean update(Ad ad) {
+//        return false;
+//    }
 
     private List<Ad> generateAds() {
         List<Ad> ads = new ArrayList<>();
